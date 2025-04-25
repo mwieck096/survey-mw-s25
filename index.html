@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Jacques Francois', serif;
+        background-color: rgba(149, 186, 211, 1);
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin: 0 0 10px 0;
+      }
+
+      .heading-box {
+        background-color: white;
+        padding: 20px 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .heading-box h1 {
+        font-size: 40px;
+        margin: 0;
+        color: #000;
+      }
+
+      input[type="submit"]:hover {
+        background-color: tan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading-box">
+      <h1 id="title">About Baxter James</h1>
+    </div>
+    <p id="description">What do you think of Baxter James?</p>
+    <form id="survey-form">
+      <label id="name-label" for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+      <label id="email-label" for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label id="number-label" for="number">How many hugs should Baxter get?</label>
+      <input type="number" id="number" name="hugs" min="0" max="10000" placeholder="Ex. 3">
+
+      <label for="dropdown">What do you think of Baxter?</label>
+      <select id="dropdown" name="Feeling">
+        <option value="He's cute">He's cute</option>
+        <option value="He stole my lunch money">He stole my lunch</option>
+        <option value="He looks like a rat">He looks like a rat</option>
+        <option value="I'm allergic">I'm allergic</option>
+        <option value="I don't trust him">I don't trust him</option>
+      </select>
+
+      <p>Would you trust Baxter?</p>
+      <label><input type="radio" name="trust" value="Yes" /> Yes</label>
+      <label><input type="radio" name="trust" value="No(You want to say yes)" /> No (you want to say yes)</label>
+
+      <p>What traits apply to Baxter? (Check all that apply)</p>
+      <label><input type="checkbox" name="traits" value="Cute" /> Cute</label>
+      <label><input type="checkbox" name="traits" value="Shifty" /> Shifty</label>
+      <label><input type="checkbox" name="traits" value="Soft" /> Soft</label>
+      <label><input type="checkbox" name="traits" value="Greedy" /> Greedy</label>
+
+      <p>Give us your thoughts on Baxter:</p>
+      <textarea name="comments" rows="5" cols="40" placeholder="He knows where you live, resistance is futile..."></textarea>
+
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+       <img src="https://tse4.mm.bing.net/th/id/OIP.U5QRSZ4u0QXctA0nt0nBZAAAAA?rs=1&pid=ImgDetMain" alt="Description of image">
+  </body>
+</html>
